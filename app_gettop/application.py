@@ -7,5 +7,6 @@ class Application:
         self.main_page = ProductPage(self.driver)
 
 
+
 ##m = Application()
 ##m.main_page.click()

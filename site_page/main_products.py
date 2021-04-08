@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import Select
 class ProductPage(Page):
 
     def open_select_product(self, alias):
-        self.open_url('https://gettop.us/product/' + 'alias')
+        self.open_url('https://gettop.us/product/' + alias)
 
 ##m = Page
 ##m.click()
