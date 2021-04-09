@@ -6,7 +6,3 @@ class Application:
         self.driver = driver
         self.main_page = ProductPage(self.driver)
 
-
-
-##m = Application()
-##m.main_page.click()

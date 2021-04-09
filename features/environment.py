@@ -6,7 +6,7 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome(executable_path=r'C:\Users\ericc\Desktop\JobEasy_Git_GitHub\python-selenium-automation\chromedriver(1).exe')
+    context.driver = webdriver.Chrome(executable_path=r'C:\Users\ericc\Desktop\JobEasy_Git_GitHub\GettopAutomation\chromedriver.exe')
     # context.browser = webdriver.Safari()
     # context.browser = webdriver.Firefox()
 
@@ -16,7 +16,6 @@ def browser_init(context):
     context.driver.wait = WebDriverWait(context.driver, 10)
 
     context.app = Application(context.driver)
-    ##print(dir(context.app))
 
 
 def before_scenario(context, scenario):
