@@ -6,14 +6,18 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome(executable_path=r'C:\Users\ericc\Desktop\JobEasy_Git_GitHub\GettopAutomation\chromedriver.exe')
+    #context.driver = webdriver.Chrome(executable_path=r'C:\Users\ericc\Desktop\JobEasy_Git_GitHub\GettopAutomation\chromedriver.exe')
     # context.browser = webdriver.Safari()
-    # context.browser = webdriver.Firefox()
+    #context.driver = webdriver.Firefox(executable_path=r'C:\Users\ericc\Desktop\JobEasy_Git_GitHub\GettopAutomation\geckodriver.exe')
 
-    context.driver.maximize_window()
-    context.driver.implicitly_wait(4)
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    context.driver = webdriver.Chrome(executable_path=r'C:\Users\ericc\Desktop\JobEasy_Git_GitHub\GettopAutomation\chromedriver.exe', chrome_options=options)
 
-    context.driver.wait = WebDriverWait(context.driver, 10)
+    ##context.driver.maximize_window()
+    ##context.driver.implicitly_wait(4)
+
+    ##context.driver.wait = WebDriverWait(context.driver, 10)
 
     context.app = Application(context.driver)
 
